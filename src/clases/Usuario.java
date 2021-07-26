@@ -1,0 +1,61 @@
+package clases;
+
+import java.util.*;
+
+public class Usuario {
+	
+	private int NIP;
+	private Cuenta cuenta;
+	private String nombre;
+	private String apellido;
+	private Date fechaNac=new Date(); 
+		
+	public Usuario(String nombre,String apellido,int NIP,double saldo, int nCuenta) {
+		setNombre(nombre);
+		setApellido(apellido);
+		setNIP(NIP);
+		setCuenta(saldo, nCuenta);
+	}
+	
+	public void setNIP(int result) {
+		if(String.valueOf(result).length()==5) {
+			this.NIP=result; 
+		}else {
+			throw new IllegalArgumentException("ERROR");
+		}
+		
+	}
+	public int getNIP() { 
+		return NIP; 
+	}
+	public void setNombre(String nombre) {
+		this.nombre=nombre; 
+	}
+	public String getNombre() { 
+		return nombre; 
+	}
+	public void setApellido(String apellido) {
+		this.apellido=apellido; 
+	}
+	public String getApellido() {
+		return apellido; 
+	}
+	public void setCuenta(double saldo,int nCuenta) {
+		this.cuenta=new Cuenta(saldo,nCuenta); 
+	}
+	public Cuenta getCuenta() {
+		return cuenta;
+	}
+	public void setFechaNac(int d, int m, int y) {
+		
+		fechaNac.setDate(d);
+		fechaNac.setMonth(m);
+		fechaNac.setYear(y);
+		
+	}
+	public String getFechaNac() {
+		return fechaNac.getDate()+"/"+fechaNac.getMonth()+"/"+fechaNac.getYear(); 
+	}
+	
+	
+}
