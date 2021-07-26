@@ -75,6 +75,20 @@ public class Teclado {
 		 
 			return resultado;
 	}
+
+	public void continuar() {
+		sca=new Scanner(System.in);
+		
+		String continuar;
+		System.out.println("< - PRESIONE CUALQUIER TECLA PARA CONTINUAR - >");
+
+		try {
+			continuar=sca.nextLine();
+		}catch(Exception e){
+			
+		}
+			
+	}
 	
 	
 }

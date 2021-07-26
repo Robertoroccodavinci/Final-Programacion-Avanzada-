@@ -25,6 +25,7 @@ public class Main {
 			if(ca.iniciarSesion(numeroUsuario, numeroCuenta)==true) {
 
 				ca.getPantalla().mensajeInicioSesion(ca.getUsuario().getNombre(), ca.getUsuario().getApellido());
+				ca.getTeclado().continuar();
 				
 				int contt=0;
 				do{
@@ -34,22 +35,23 @@ public class Main {
 					switch(numeroTransaccion) {
 						case 1: 
 							ca.getPantalla().mensajeConsultaSaldo(ca.consultaSaldo());
-							
+							ca.getTeclado().continuar();
 							break;
 						case 2: 
 							ca.getPantalla().mensajeInicioDepositar();
 							double monto=ca.getTeclado().numDouble();
 							ca.getPantalla().mensajeDepositar(monto,ca.consultaSaldo(), ca.depositar(monto));
+							ca.getTeclado().continuar();
 							break;
 						case 3:
 							ca.getPantalla().mensajeInicioRetirar();
 							double montoR=ca.getTeclado().numDouble();
 							ca.getPantalla().mensajeRetirar(montoR,ca.consultaSaldo(), ca.retirar(montoR));
+							ca.getTeclado().continuar();
 							break;
 						case 4:
 							ca.getPantalla().mensajeSalir();
-							
-							
+							ca.getTeclado().continuar();
 							
 							contt=1;
 							break;

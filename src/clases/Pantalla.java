@@ -31,12 +31,22 @@ public class Pantalla {
 						   "###########################################\n");
 	}
 	public void mensajeInicioSesion(String nombre, String apellido) {
-		System.out.println("###########################################\n"+
-						   "####                                       \n"+
-						   "####      - BIENVENIDO USUARIO! -          \n"+
-						   "####      - "+nombre.toUpperCase()+" "+apellido.toUpperCase()+" - \n"+
-						   "####                                       \n"+
-						   "###########################################\n");
+		int espacios=35;
+		
+		int es=String.valueOf(nombre).length()+1+String.valueOf(apellido).length();
+		String agregar="";
+		
+			int result= espacios-es;
+			for(int i=1; i<result;i++){
+				agregar+=" ";
+			}
+				
+		System.out.println("#######################################################\n"+
+						   "####                                               ####\n"+
+						   "####      - BIENVENIDO USUARIO! -                  ####\n"+
+						   "####      - "+nombre.toUpperCase()+" "+apellido.toUpperCase()+" -"+agregar+"   ####\n"+
+						   "####                                               ####\n"+
+						   "#######################################################\n");
 		
 	}
 	
@@ -56,12 +66,22 @@ public class Pantalla {
 	
 	//CONSULTAR SALDO
 	public void mensajeConsultaSaldo(double saldo) {
-		System.out.println("###########################################\n"+
-						   "####                                       \n"+
-						   "####       - CONSULTA SALDO -              \n"+
-					       "####         SALDO: "+saldo+"              \n"+
-						   "####                                       \n"+
-						   "###########################################\n");
+		int espacios=23;
+		int es=String.valueOf(saldo).length();
+		int result= espacios-es;
+		String agregar="";
+			for(int i=1; i<result;i++){
+				agregar+=" ";
+			}	
+		
+
+
+		System.out.println("###################################################\n"+
+						   "####                                          #####\n"+
+						   "####       - CONSULTA SALDO -                 #####\n"+
+					       "####       SALDO: "+saldo+agregar+"      #####\n"+
+						   "####                                          #####\n"+
+						   "###################################################\n");
 	}
 	
 	//DEPOSITAR
@@ -75,22 +95,41 @@ public class Pantalla {
 	}
 	
 	public void mensajeDepositar(double monto, double saldo, boolean estado) {
-		String mensaje="";
+		int espacios=46;
+		int[] es=new int[4];
+		String[] agregar=new String[4];
+		es[0]= String.valueOf(monto).length()+19;
+		es[1]= String.valueOf(saldo).length()+7;
+		es[2]= String.valueOf(estado).length()+23;
+		agregar[0]="";
+		agregar[1]="";
+		agregar[2]="";
+		agregar[3]="";
+
+		String mensaje;
 		if(estado==false) {
-			mensaje="\n   ERROR: INGRESE UN VALOR MAYOR A 0.0.";
+			mensaje="ERROR: INGRESE UN VALOR MAYOR A 0.0.";
 		}else {
-			mensaje="\n   SALDO ACTUAL: "+(saldo+monto);
+			mensaje="SALDO ACTUAL: "+(saldo+monto);
 		}
-		System.out.println("###########################################\n"+
-						   "####                                       \n"+
-						   "####     - TRANSACCION: DEPOSITAR -        \n"+
-					       "####      SALDO: "+saldo+"                 \n"+
-				 	       "####      MONTO A DEPOSITAR: "+monto+"     \n"+
-				 	       "####      ESTADO DE TRANSACCION: "+estado+"\n"+
-				 	       "####      "+mensaje+"                      \n"+
-						   "####                                       \n"+
-						   "###########################################\n");
-		
+		es[3]= String.valueOf(mensaje).length();
+
+		for(int i=0; i<4;i++){
+			int result= espacios-es[i];
+			for(int k=1; k<result;k++){
+				agregar[i]+=" ";
+			}	
+		}
+
+		System.out.println("################################################################\n"+
+						   "####                                                        ####\n"+
+						   "####               - TRANSACCION: DEPOSITAR -               ####\n"+
+					       "####      SALDO: "+saldo+agregar[1]+"     ####\n"+
+				 	       "####      MONTO A DEPOSITAR: "+monto+agregar[0]+"     ####\n"+
+				 	       "####      ESTADO DE TRANSACCION: "+estado+agregar[2]+"     ####\n"+
+				 	       "####      "+mensaje+agregar[3]+"     ####\n"+
+						   "####                                                        ####\n"+
+						   "################################################################\n");
 	}
 	
 	
@@ -103,22 +142,41 @@ public class Pantalla {
 						   "###########################################\n");
 	}
 	public void mensajeRetirar(double monto, double saldo, boolean estado) {
-		
-		String mensaje="";
+		int espacios=46;
+		int[] es=new int[4];
+		String[] agregar=new String[4];
+		es[0]= String.valueOf(monto).length()+17;
+		es[1]= String.valueOf(saldo).length()+7;
+		es[2]= String.valueOf(estado).length()+23;
+		agregar[0]="";
+		agregar[1]="";
+		agregar[2]="";
+		agregar[3]="";
+
+		String mensaje;
 		if(estado==false) {
-			mensaje="   ERROR: INGRESE UN VALOR MENOS O IGUAL AL SALDO";
+			mensaje="ERROR: INGRESE UN VALOR MENOS O IGUAL AL SALDO";
 		}else {
-			mensaje="   SALDO ACTUAL: "+(saldo-monto);
+			mensaje="SALDO ACTUAL: "+(saldo-monto);
 		}
-		System.out.println("###########################################\n"+
-						   "####                                       \n"+
-						   "####     - TRANSACCION: RETIRAR -          \n"+
-					       "####      SALDO: "+saldo+"                 \n"+
-				 	       "####      MONTO A RETIRAR: "+monto+"       \n"+
-				 	       "####      ESTADO DE TRANSACCION: "+estado+"\n"+
-				 	       "####      "+mensaje+"                      \n"+
-						   "####                                       \n"+
-						   "###########################################\n");
+		es[3]= String.valueOf(mensaje).length();
+
+		for(int i=0; i<4;i++){
+			int result= espacios-es[i];
+			for(int k=1; k<result;k++){
+				agregar[i]+=" ";
+			}	
+		}
+
+		System.out.println("################################################################\n"+
+						   "####                                                        ####\n"+
+						   "####                - TRANSACCION: RETIRAR -                ####\n"+
+					       "####      SALDO: "+saldo+agregar[1]+"     ####\n"+
+				 	       "####      MONTO A RETIRAR: "+monto+agregar[0]+"     ####\n"+
+				 	       "####      ESTADO DE TRANSACCION: "+estado+agregar[2]+"     ####\n"+
+				 	       "####      "+mensaje+agregar[3]+"     ####\n"+
+						   "####                                                        ####\n"+
+						   "################################################################\n");
 	}
 
 	//SALIR
@@ -130,7 +188,6 @@ public class Pantalla {
 						   "####        CAJEROS AUTOMATICOS        ####\n"+
 						   "####                                   ####\n"+
 						   "###########################################\n");
-		
 		
 	}
 	
