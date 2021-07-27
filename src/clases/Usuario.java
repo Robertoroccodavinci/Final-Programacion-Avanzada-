@@ -8,8 +8,7 @@ public class Usuario {
 	private Cuenta cuenta;
 	private String nombre;
 	private String apellido;
-	private Date fechaNac=new Date(); 
-		
+			
 	public Usuario(String nombre,String apellido,int NIP,double saldo, int nCuenta) {
 		setNombre(nombre);
 		setApellido(apellido);
@@ -46,16 +45,6 @@ public class Usuario {
 	public Cuenta getCuenta() {
 		return cuenta;
 	}
-	public void setFechaNac(int d, int m, int y) {
 		
-		fechaNac.setDate(d);
-		fechaNac.setMonth(m);
-		fechaNac.setYear(y);
-		
-	}
-	public String getFechaNac() {
-		return fechaNac.getDate()+"/"+fechaNac.getMonth()+"/"+fechaNac.getYear(); 
-	}
-	
 	
 }

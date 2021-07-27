@@ -91,7 +91,7 @@ public class Main {
 		do {
 			banco.addUsuario(nombre[uCont],apellido[uCont], NIP[uCont],saldoInicial[uCont],nCuenta[uCont]);
 	        usuario = banco.getUsuario(uCont);
-	        usuario.setFechaNac(fechaNac[uCont], fechaNac[(uCont+6)], fechaNac[(uCont+12)]);
+	        
 		
 			uCont++;
 		} while(uCont!=nombre.length);
@@ -105,7 +105,6 @@ public class Main {
         do {
         	contenido+="#####################<Usuario: "+(cont+1)+">########################\n"+
 					   "Nombre y Apellido: "+banco.getUsuario(cont).getNombre()+" "+banco.getUsuario(cont).getApellido()+"\n"+
-					   "Fecha Nacimiento: "+banco.getUsuario(cont).getFechaNac()+"\n"+
 					   "Saldo: "+banco.getUsuario(cont).getCuenta().consultaSaldo()+"\n"+
 					   "NIP: "+banco.getUsuario(cont).getNIP()+"\n"+
 					   "Numero de Cuenta: "+banco.getUsuario(cont).getCuenta().getNCuenta()+"\n";
