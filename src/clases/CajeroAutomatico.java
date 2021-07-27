@@ -71,10 +71,12 @@ public class CajeroAutomatico {
 	}
 	
 	public boolean retirar(double monto) {
+		
 		if(user.getCuenta().retirar(monto)==true) {
 			getDispensador().retirarDinero(monto);
 			return true;
 		}
+	
 		return false;
 	}
 	

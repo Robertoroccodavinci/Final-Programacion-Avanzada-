@@ -7,33 +7,34 @@ public class Pantalla {
 	}
 	//INICIO
 	public void mensajeInicio() {
-		System.out.println("###########################################\n"+
-						   "####                                   ####\n"+
-						   "####          - BIENVENIDO -           ####\n"+
-						   "####                                   ####\n"+
-						   "###########################################\n");
+		System.out.println("################################################################\n"+
+						   "####                                                        ####\n"+
+						   "####                    - BIENVENIDO -                      ####\n"+
+						   "####                                                        ####\n"+
+						   "################################################################\n");
 	}
 	
 	//INICIO SESION
 	public void mensajeNIP() {
-		System.out.println("###########################################\n"+
-						   "####                                   ####\n"+
-						   "####         INGRESE NUMERO DE         ####\n"+
-						   "####     IDENTIFICACION DE USUARIO     ####\n"+
-						   "####                                   ####\n"+
-						   "###########################################\n");
+		System.out.println("################################################################\n"+
+						   "####                                                        ####\n"+
+						   "####                   INGRESE NUMERO DE                    ####\n"+
+						   "####               IDENTIFICACION DE USUARIO                ####\n"+
+						   "####                                                        ####\n"+
+						   "################################################################\n");
 	}
 	public void mensajeNCuenta() {
-		System.out.println("###########################################\n"+
-						   "####                                   ####\n"+
-						   "####     INGRESE NUMERO DE CUENTA      ####\n"+
-						   "####                                   ####\n"+
-						   "###########################################\n");
+		System.out.println("################################################################\n"+
+						   "####                                                        ####\n"+
+						   "####               INGRESE NUMERO DE CUENTA                 ####\n"+
+						   "####                                                        ####\n"+
+						   "################################################################\n");
 	}
 	public void mensajeInicioSesion(String nombre, String apellido) {
-		int espacios=35;
+		int espacios=44;
 		
 		int es=String.valueOf(nombre).length()+1+String.valueOf(apellido).length();
+		
 		String agregar="";
 		
 			int result= espacios-es;
@@ -41,32 +42,32 @@ public class Pantalla {
 				agregar+=" ";
 			}
 				
-		System.out.println("#######################################################\n"+
-						   "####                                               ####\n"+
-						   "####      - BIENVENIDO USUARIO! -                  ####\n"+
+		System.out.println("################################################################\n"+
+						   "####                                                        ####\n"+
+						   "####      - BIENVENIDO USUARIO! -                           ####\n"+
 						   "####      - "+nombre.toUpperCase()+" "+apellido.toUpperCase()+" -"+agregar+"   ####\n"+
-						   "####                                               ####\n"+
-						   "#######################################################\n");
+						   "####                                                        ####\n"+
+						   "################################################################\n");
 		
 	}
 	
 	//MENU
 	public void mensajeMenu() {
-		System.out.println("###########################################\n"+
-						   "####                                   ####\n"+
-						   "#### - INGRESE NUMERO DE TRANSACCION - ####\n"+
-  					       "#### -> OPCION 1: CONSULTAR SALDO    - ####\n"+
-				 	       "#### -> OPCION 2: DEPOSITAR          - ####\n"+
-				 	       "#### -> OPCION 3: RETIRAR            - ####\n"+
-						   "#### -> OPCION 4: SALIR              - ####\n"+
-						   "####                                   ####\n"+
-						   "###########################################\n");
+		System.out.println("################################################################\n"+
+						   "####                                                        ####\n"+
+						   "####    - INGRESE NUMERO DE TRANSACCION  -                  ####\n"+
+  					       "####    - > OPCION 1: CONSULTAR SALDO    -                  ####\n"+
+				 	       "####    - > OPCION 2: DEPOSITAR          -                  ####\n"+
+				 	       "####    - > OPCION 3: RETIRAR            -                  ####\n"+
+						   "####    - > OPCION 4: SALIR              -                  ####\n"+
+						   "####                                                        ####\n"+
+						   "################################################################\n");
 	}
 	
 	
 	//CONSULTAR SALDO
 	public void mensajeConsultaSaldo(double saldo) {
-		int espacios=23;
+		int espacios=36;//23
 		int es=String.valueOf(saldo).length();
 		int result= espacios-es;
 		String agregar="";
@@ -76,21 +77,21 @@ public class Pantalla {
 		
 
 
-		System.out.println("###################################################\n"+
-						   "####                                          #####\n"+
-						   "####       - CONSULTA SALDO -                 #####\n"+
+		System.out.println("################################################################\n"+
+						   "####                                                       #####\n"+
+						   "####           - CONSULTA SALDO -                          #####\n"+
 					       "####       SALDO: "+saldo+agregar+"      #####\n"+
-						   "####                                          #####\n"+
-						   "###################################################\n");
+						   "####                                                       #####\n"+
+						   "################################################################\n");
 	}
 	
 	//DEPOSITAR
 	public void mensajeInicioDepositar() {
-		System.out.println("###########################################\n"+
-						   "####                                   ####\n"+
-						   "####   - INGRESE MONTO A DEPOSITAR -   ####\n"+
-					       "####                                   ####\n"+
-						   "###########################################\n");
+		System.out.println("################################################################\n"+
+						   "####                                                        ####\n"+
+						   "####             - INGRESE MONTO A DEPOSITAR -              ####\n"+
+					       "####                                                        ####\n"+
+						   "################################################################\n");
 		
 	}
 	
@@ -134,12 +135,47 @@ public class Pantalla {
 	
 	
 	//RETIRAR
-	public void mensajeInicioRetirar() {
-		System.out.println("###########################################\n"+
-						   "####                                   ####\n"+
-						   "####    - INGRESE MONTO A RETIRAR -    ####\n"+
-					       "####                                   ####\n"+
-						   "###########################################\n");
+	public void mensajeInicioRetirar(double saldo) {
+		
+		String opciones="";
+		if(saldo>100){
+			opciones+="####    - > OPCION 1: 20                 -                  ####\n";
+			opciones+="####    - > OPCION 2: 100                -                  ####\n";
+		}
+		if(saldo>1000){
+			opciones+="####    - > OPCION 3: 1000               -                  ####\n";
+		}
+		if(saldo>5000){
+			opciones+="####    - > OPCION 4: 5000               -                  ####\n";			
+		}
+		if(saldo>10000){
+			opciones+="####    - > OPCION 5: 10000              -                  ####\n";
+		}
+		
+
+
+
+
+
+		System.out.println("################################################################\n"+
+						"####                                                        ####\n"+
+						"####    - INGRESE MONTO A RETIRAR        -                  ####\n"+
+						opciones+
+						"####                                                        ####\n"+
+						"################################################################\n");
+	
+
+	}
+	
+	public void mensajeErrorRetirar() {
+		System.out.println("################################################################\n"+
+						   "####                                                        ####\n"+
+						   "####                       - ERROR -                        ####\n"+
+						   "####        - EL CAJERO CUENTA CON BILLETES DE 20$ -        ####\n"+
+						   "####     - EL MONTO INGRESADO NO DEBE DE SER REDONDO -      ####\n"+
+						   "####         - INGRESE VALORES COMO 100,500,1000 -          ####\n"+
+					       "####                                                        ####\n"+
+						   "################################################################\n");
 	}
 	public void mensajeRetirar(double monto, double saldo, boolean estado) {
 		int espacios=46;
@@ -181,13 +217,13 @@ public class Pantalla {
 
 	//SALIR
 	public void mensajeSalir() {
-		System.out.println("###########################################\n"+
-						   "####                                   ####\n"+
-						   "####        GRACIAS POR UTILIZAR       ####\n"+
-						   "####        NUESTRO SERVICIO DE        ####\n"+
-						   "####        CAJEROS AUTOMATICOS        ####\n"+
-						   "####                                   ####\n"+
-						   "###########################################\n");
+		System.out.println("################################################################\n"+
+						   "####                                                        ####\n"+
+						   "####                  GRACIAS POR UTILIZAR                  ####\n"+
+						   "####                  NUESTRO SERVICIO DE                   ####\n"+
+						   "####                  CAJEROS AUTOMATICOS                   ####\n"+
+						   "####                                                        ####\n"+
+						   "################################################################\n");
 		
 	}
 	

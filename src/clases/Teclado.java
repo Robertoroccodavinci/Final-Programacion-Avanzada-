@@ -32,7 +32,7 @@ public class Teclado {
 				
 			}while(error==true);
 		} 
-		//MENU 
+		//MENU TRANSACCIONES
 		else if(largo==1&&tipo==3) {
 			do {
 				try {
@@ -51,6 +51,7 @@ public class Teclado {
 				
 			}while(error==true);
 		}
+		
 		return resultado;
 	}
 	
@@ -58,7 +59,7 @@ public class Teclado {
 		sca=new Scanner(System.in);
 		double resultado=0.0;
 		
-		//DEPOSITAR O RETIRAR
+		//DEPOSITAR
 		
 			do {
 				try {
@@ -74,6 +75,46 @@ public class Teclado {
 			}while(error==true);
 		 
 			return resultado;
+	}
+	public double numRetirar(){
+		int resultado=0;
+		double monto=0;
+		do {
+			try {
+				resultado=sca.nextInt();
+				if(resultado<=5&&resultado>0) {
+					error=false;
+				}else {
+					System.out.println("  ERROR: INGRESE NUMERO VALIDO  \n");
+					sca.nextLine();
+				}
+			}catch(InputMismatchException e){
+				System.out.println("  ERROR: INGRESE NUMERO VALIDO  \n");
+				error=true;
+				sca.nextLine();
+			}
+			
+		}while(error==true);
+
+		switch(resultado){
+			case 1:
+				monto=20;
+				break;
+			case 2:
+				monto=100;
+				break;
+			case 3:
+				monto=1000;
+				break;
+			case 4:
+				monto=5000;
+				break;	
+			case 5:
+				monto=10000;
+				break;
+		}
+		
+		return monto;
 	}
 
 	public void continuar() {
