@@ -76,12 +76,10 @@ public class Main {
 	
 	//METODO PARA INICIALIZAR USUARIOS Y MOSTRARLOS
 	private static void inicializarUsuarios(Banco banco) {
-		Usuario usuario;
-		
+				
 		// BASE DE DATOS DE USUARIOS CON NOMBRE, APELLIDO, NIP Y CUENTAS CON SALDO INICIAL Y NUMERO DE CUENTA
 		String[] nombre= {"Jane","Jose","Pepito","Carlos","Martin","Luis"};
 		String[] apellido= {"Simms","Perez","Fuentes","Caruso","Alvarez","Podest�"};
-		int[] fechaNac= {12,23,29,5,3,16,2,5,7,8,11,10,1991,1989,2000,1984,2001,1998};
 		double[] saldoInicial= {50500, 33330, 40460, 72830, 9820, 56981};
 		int[] NIP= {87462, 15874, 98562, 54185, 15648, 87954};
 		int[] nCuenta= {25875, 96874, 78954, 32465, 25436, 31975};	
@@ -90,9 +88,7 @@ public class Main {
 		//CREAMOS USUARIOS
 		do {
 			banco.addUsuario(nombre[uCont],apellido[uCont], NIP[uCont],saldoInicial[uCont],nCuenta[uCont]);
-	        usuario = banco.getUsuario(uCont);
-	        
-		
+
 			uCont++;
 		} while(uCont!=nombre.length);
 
