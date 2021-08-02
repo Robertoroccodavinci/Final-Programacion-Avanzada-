@@ -1,0 +1,61 @@
+lista de usuarios
+
+< - Usuario: 1 - >
+Nombre y Apellido: Johana Sobrado
+Saldo: 50500
+NIP: 87462
+Numero de Cuenta: 25875
+
+< - Usuario: 2 - >
+Nombre y Apellido: Jose Perez
+Saldo: 33330
+NIP: 15874
+Numero de Cuenta: 96874
+
+< - Usuario: 3 - >
+Nombre y Apellido: Pepito Fuentes
+Saldo: 40460
+NIP: 98562
+Numero de Cuenta: 78954
+
+< - Usuario: 4 - >
+Nombre y Apellido: Carlos Caruso
+Saldo: 72830
+NIP: 54185
+Numero de Cuenta: 32465
+
+< - Usuario: 5 - >
+Nombre y Apellido: Martin Alvarez
+Saldo: 9820
+NIP: 15648
+Numero de Cuenta: 25436
+
+< - Usuario: 6 - >
+Nombre y Apellido: Luis Podestá
+Saldo: 56981
+NIP: 87954
+Numero de Cuenta: 31975
+
+< - Usuario: 7 - >
+Nombre y Apellido: Mariana Guillen
+Saldo: 8413
+NIP: 23479
+Numero de Cuenta: 13812
+
+< - Usuario: 8 - >
+Nombre y Apellido: Gastón Ayres
+Saldo: 41689
+NIP: 34806
+Numero de Cuenta: 42301
+
+< - Usuario: 9 - >
+Nombre y Apellido: Lucia Blanche
+Saldo: 12352
+NIP: 46978
+Numero de Cuenta: 53462
+
+< - Usuario: 10 - >
+Nombre y Apellido: Florencia Medina
+Saldo: 10010
+NIP: 74973
+Numero de Cuenta: 62308

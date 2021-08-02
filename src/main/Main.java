@@ -78,11 +78,11 @@ public class Main {
 	private static void inicializarUsuarios(Banco banco) {
 				
 		// BASE DE DATOS DE USUARIOS CON NOMBRE, APELLIDO, NIP Y CUENTAS CON SALDO INICIAL Y NUMERO DE CUENTA
-		String[] nombre= {"Jane","Jose","Pepito","Carlos","Martin","Luis"};
-		String[] apellido= {"Simms","Perez","Fuentes","Caruso","Alvarez","Podest�"};
-		double[] saldoInicial= {50500, 33330, 40460, 72830, 9820, 56981};
-		int[] NIP= {87462, 15874, 98562, 54185, 15648, 87954};
-		int[] nCuenta= {25875, 96874, 78954, 32465, 25436, 31975};	
+		String[] nombre= {"Johana","Jose","Pepito","Carlos","Martin","Luis","Mariana", "Gastón", "Lucia","Florencia"};
+		String[] apellido= {"Sobrado","Perez","Fuentes","Caruso","Alvarez","Podestá", "Guillen", "Ayres","Blanche"," Medina"};
+		double[] saldoInicial= {50500, 33330, 40460, 72830, 9820, 56981,8413,41689,12352,10010};
+		int[] NIP= {87462, 15874, 98562, 54185, 15648, 87954,23479,34806,46978,74973};
+		int[] nCuenta= {25875, 96874, 78954, 32465, 25436, 31975,13812,42301,53462,62308};	
 		int uCont=0;
 
 		//CREAMOS USUARIOS
@@ -92,23 +92,6 @@ public class Main {
 			uCont++;
 		} while(uCont!=nombre.length);
 
-
-        
-        // MOSTRAR USUARIOS
-		
-        int cont=0;
-        String contenido="";
-        do {
-        	contenido+="#####################<Usuario: "+(cont+1)+">########################\n"+
-					   "Nombre y Apellido: "+banco.getUsuario(cont).getNombre()+" "+banco.getUsuario(cont).getApellido()+"\n"+
-					   "Saldo: "+banco.getUsuario(cont).getCuenta().consultaSaldo()+"\n"+
-					   "NIP: "+banco.getUsuario(cont).getNIP()+"\n"+
-					   "Numero de Cuenta: "+banco.getUsuario(cont).getCuenta().getNCuenta()+"\n";
-        	
-        	cont=cont+1;
-        }while(cont!=banco.getNumUsuarios());
-        
-        System.out.println(contenido);
         
     }
 
