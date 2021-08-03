@@ -1,0 +1,3 @@
+Antes de compilar el proyecto
+revisar el archivo Usuarios.txt
+donde estan los usuarios y sus datos que seran necesarios para probar el programa.
